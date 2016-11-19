@@ -14,6 +14,7 @@ namespace App{
 	 * helloWorld.SetLanguage(HelloWorld::Language::kEnglish);
 	 * helloWorld.Output(); // Hello World
 	 * @endcode
+	 * また、静的関数を使用して直接各言語ごとに出力することも可能です
 	 */
 	class HelloWorld{
 	public:
@@ -26,6 +27,34 @@ namespace App{
 			kGermany,	//!< ドイツ語
 			kFrench,	//!< フランス語
 		};
+
+	public:
+		/**
+		 * @name 簡易出力用
+		 */
+		//@{
+
+		/**
+		 * 英語で出力します
+		 */
+		static void OutputEnglish();
+
+		/**
+		 * 日本語で出力します
+		 */
+		static void OutputJapanese();
+
+		/**
+		 * ドイツ語で出力します
+		 */
+		static void OutputGermany();
+
+		/**
+		 * フランス語で出力します
+		 */
+		static void OutputFrench();
+
+		//@}
 
 	public:
 		/**
@@ -52,6 +81,12 @@ namespace App{
 		 */
 		void SetLanguage(Language language);
 
+		/**
+		 * 設定されている言語を取得します
+		 * @return	設定されている言語
+		 */
+		Language GetLanguage() const;
+
 	private:
 		Language	language_;	//!< 言語
 	};
@@ -60,6 +95,12 @@ namespace App{
 	inline void HelloWorld::SetLanguage(Language language)
 	{
 		language_ = language;
+	}
+
+	//--------------------------------------------------------------------------
+	inline HelloWorld::Language HelloWorld::GetLanguage() const
+	{
+		return language_;
 	}
 } // namespace App
 

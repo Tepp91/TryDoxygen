@@ -8,6 +8,30 @@
 
 namespace App{
 	//--------------------------------------------------------------------------
+	void HelloWorld::OutputEnglish()
+	{
+		std:: cout << "Hello world." << std::endl;
+	}
+
+	//--------------------------------------------------------------------------
+	void HelloWorld::OutputJapanese()
+	{
+		std:: cout << "おはよう　世界" << std::endl;
+	}
+
+	//--------------------------------------------------------------------------
+	void HelloWorld::OutputGermany()
+	{
+		std:: cout << "Hallo welt." << std::endl;
+	}
+
+	//--------------------------------------------------------------------------
+	void HelloWorld::OutputFrench()
+	{
+		std:: cout << "Bonjour le monde." << std::endl;
+	}
+
+	//--------------------------------------------------------------------------
 	HelloWorld::HelloWorld()
 		:	language_	( Language::kEnglish )
 	{
@@ -18,19 +42,19 @@ namespace App{
 	{
 		switch(language_){
 		case Language::kEnglish:
-			std:: cout << "Hello world." << std::endl;
+			OutputEnglish();
 			break;
 
 		case Language::kJapanese:
-			std:: cout << "おはよう　世界" << std::endl;
+			OutputJapanese();
 			break;
 
 		case Language::kGermany:
-			std:: cout << "Hallo welt." << std::endl;
+			OutputGermany();
 			break;
 
 		case Language::kFrench:
-			std:: cout << "Bonjour le monde." << std::endl;
+			OutputFrench();
 			break;
 		}
 	}
