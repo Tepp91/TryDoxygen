@@ -7,7 +7,9 @@ namespace App{
 	/**
 	 * Hello Worldの出力を行います
 	 *
-	 * 様々な言語のHello Worldを出力することができます
+	 * 様々な言語のHello Worldを出力することができます。<br>
+	 * 言語は SetLanguage(Language)を使用して指定します。
+	 *
 	 * @code
 	 * HelloWorld helloWorld;
 	 *
